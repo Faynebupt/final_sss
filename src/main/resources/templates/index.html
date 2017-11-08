@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>thymeleaf demo</title>
+</head>
+<body>
+<p>1</p>
+<td  th:text="${message}">temp1</td>
+<p>2</p>
+<input type="text" name="userName" value="James Carrot" th:value="${user.name}" />
+<p>3</p>
+<!--<div th:object="${session.user}">-->
+<!--<p>Nationality: <span th:text="*{nationality}">Saturn</span>.</p>-->
+<!--</div>-->
+<!--<form th:action="@{/temp1}" th:object="${user}" method="post" th:method="post">-->
+    <!--<input type="text" th:field="*{name}"/>-->
+    <!--<input type="text" th:field="*{name}"/>-->
+    <!--<br/>-->
+    <!--<input type="text" th:field="*{id}"/>-->
+    <!--<br/>-->
+    <!--<input type="submit"/>-->
+<!--</form>-->
+<p>4</p>
+<!--${#ctx} <br/>-->
+<!--<input type="text" data-th-value="${#ctx}" value="default value"> <br/>-->
+<!--${#vars} <br/>-->
+<!--<input type="text" data-th-value="${#vars}" value="default value"> <br/>-->
+<!--${#locale} <br/>-->
+<!--<input type="text" data-th-value="${#locale}" value="default value"> <br/>-->
+<!--${#request} <br/>-->
+<!--<input type="text" data-th-value="${#request}" value="default value"> <br/>-->
+<!--${#response} <br/>-->
+<!--<input type="text" data-th-value="${#response}" value="default value"/> <br/>-->
+<!--${#session} <br/>-->
+<!--<input type="text" data-th-value="${#session}" value="default value"> <br/>-->
+<!--${#servletContext} <br/>-->
+<!--<input type="text" data-th-value="${#servletContext}" value="default value"> <br/>-->
+<p>5</p>
+
+
+
+<p>6</p>
+
+<form  th:action="@{/index}" method="post">
+    username:<br/>
+    <input type="text" name="username" value="Mickey"/>
+    <br/>
+    password:<br/>
+    <input type="text" name="password" value="Mouse"/>
+    <input type="submit" value="Submit"/>
+</form>
+
+</body>
+</html>

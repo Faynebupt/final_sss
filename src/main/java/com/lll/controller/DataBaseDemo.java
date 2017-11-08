@@ -6,7 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import com.lll.dao.UserDao;
 import com.lll.entity.User;
-
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestParam;
 import java.util.List;
 
 /**
@@ -15,11 +16,9 @@ import java.util.List;
 @Controller
 @RequestMapping(value = "/database")
 public class DataBaseDemo {
-
-
-
     @Autowired
     private UserDao userDao;
+
 
 
     @RequestMapping(value = "/selectall")
@@ -33,6 +32,7 @@ public class DataBaseDemo {
         System.out.println(str);
         return str;
 }
+
 
     @RequestMapping(value = "/selectbyname")
     @ResponseBody

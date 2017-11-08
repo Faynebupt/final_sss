@@ -16,6 +16,9 @@ public interface UserDao extends JpaRepository<User, Long> {
     User findByNameAndAge(String name, Integer age);
     User getByAge(Integer age);
 
+
+
+
 //    @Modifying
     @Query(value = "select user from User user where user.name=?1")
     List<User> findByNameMatch(String name);

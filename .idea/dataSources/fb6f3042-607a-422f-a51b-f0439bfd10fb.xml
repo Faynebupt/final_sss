@@ -23,22 +23,31 @@
     <schema id="17" parent="1" name="temp2"/>
     <schema id="18" parent="1" name="temp3"/>
     <schema id="19" parent="1" name="transfer_account"/>
-    <table id="20" parent="2" name="user"/>
-    <column id="21" parent="20" name="id">
+    <schema id="20" parent="1" name="admin"/>
+    <table id="21" parent="2" name="user"/>
+    <column id="22" parent="21" name="id">
       <Position>1</Position>
-      <DataType>int(11)|0</DataType>
+      <DataType>int(50)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="22" parent="20" name="name">
+    <column id="23" parent="21" name="name">
       <Position>2</Position>
       <DataType>varchar(50)|0</DataType>
     </column>
-    <column id="23" parent="20" name="age">
+    <column id="24" parent="21" name="age">
       <Position>3</Position>
-      <DataType>int(11)|0</DataType>
+      <DataType>int(50)|0</DataType>
     </column>
-    <key id="24" parent="20" name="PRIMARY">
+    <column id="25" parent="21" name="username">
+      <Position>4</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="26" parent="21" name="password">
+      <Position>5</Position>
+      <DataType>int(50)|0</DataType>
+    </column>
+    <key id="27" parent="21" name="PRIMARY">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
